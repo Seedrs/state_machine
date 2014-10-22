@@ -514,6 +514,8 @@ module StateMachine
           object.class.state_machines.transitions(object, action, :after => false).perform { yield }
         end
         
+        public :around_validation
+        
         # Creates a new callback in the callback chain, always inserting it
         # before the default Observer callbacks that were created after
         # initialization.
